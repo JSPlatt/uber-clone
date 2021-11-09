@@ -9,9 +9,14 @@ mapboxgl.accessToken = 'pk.eyJ1IjoianNwbGF0dCIsImEiOiJja3ZzODB0Z3IwYXB0MnZwcHpqd
 
 export default function Home() {
 
-  useEffect(() =>{
-    console.log('hello')
-  }, [])
+  useEffect(() => {
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-99.29011, 39.39172],
+      zoom: 3,
+    });
+  });
   // const map = new mapboxgl.Map({
   //   container: 'YOUR_CONTAINER_ELEMENT_ID',
   //   style: 'mapbox://styles/mapbox/streets-v11',
@@ -21,7 +26,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <Map>Map</Map>
+      <Map id="map"></Map>
       <ActionItems>Start</ActionItems> 
     </Wrapper>
   )
