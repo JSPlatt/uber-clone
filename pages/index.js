@@ -12,18 +12,12 @@ export default function Home() {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: "map",
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
       center: [-99.29011, 39.39172],
       zoom: 3,
     });
   });
-  // const map = new mapboxgl.Map({
-  //   container: 'YOUR_CONTAINER_ELEMENT_ID',
-  //   style: 'mapbox://styles/mapbox/streets-v11',
-  //   center: ,
-  //   zoom: ,
-  //   });
-
+  
   return (
     <Wrapper>
       <Map id="map"></Map>
