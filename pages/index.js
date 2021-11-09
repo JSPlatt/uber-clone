@@ -1,26 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import tw from 'tailwind-styled-components'
-import mapboxgl from '!mapbox-gl'
 import { useEffect } from 'react'
-
-
-mapboxgl.accessToken = 'pk.eyJ1IjoianNwbGF0dCIsImEiOiJja3ZzODB0Z3IwYXB0MnZwcHpqdGE1YTN4In0.h4i1YFRVuGN0e-yZ_m_9tg';
+import Map from './components/Map'
 
 export default function Home() {
 
-  useEffect(() => {
-    const map = new mapboxgl.Map({
-      container: "map",
-      style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
-      center: [-99.29011, 39.39172],
-      zoom: 3,
-    });
-  });
-  
   return (
     <Wrapper>
-      <Map id="map"></Map>
+      <Map />
       <ActionItems>Start</ActionItems> 
     </Wrapper>
   )
@@ -28,9 +16,6 @@ export default function Home() {
 
 const Wrapper = tw.div`
   flex flex-col bg-red-300 h-screen 
-`
-const Map = tw.div`
-  bg-red-500 flex-1
 `
 const ActionItems = tw.div`
   flex-1
