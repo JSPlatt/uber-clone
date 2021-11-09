@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import tw from 'tailwind-styled-components'
+import mapboxgl from 'mapbox-gl'
 
 export default function Home() {
   return (
@@ -12,12 +13,12 @@ export default function Home() {
 }
 
 const Wrapper = tw.div`
-  flex flex-col bg-red-300
+  flex flex-col bg-red-300 h-screen 
 `
 const Map = tw.div`
-  bg-red-500
+  bg-red-500 flex-1
 `
 const ActionItems = tw.div`
-
+  flex-1
 `
 
