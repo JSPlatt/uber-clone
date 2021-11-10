@@ -20,7 +20,18 @@ export default function Home() {
               />
             </Profile>
           </Header>
-          
+          <ActionButtons>
+            <ActionButton>
+              Ride
+            </ActionButton>
+            <ActionButton>
+              Wheels
+            </ActionButton>
+            <ActionButton>
+              Reserve
+            </ActionButton>
+          </ActionButtons>
+
           {/* ActionButtons */}
           {/* InputButton */}
       
@@ -51,4 +62,12 @@ mr-4 w-20 text-sm
 
 const UserImage = tw.img`
 h-12 w-12 rounded-full border-gray-200 p-px
+`
+
+const ActionButtons = tw.div`
+
+`
+
+const ActionButton = tw.div`
+
 `
