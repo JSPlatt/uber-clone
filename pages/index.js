@@ -21,15 +21,22 @@ export default function Home() {
             </Profile>
           </Header>
           <ActionButtons>
+            
             <ActionButton>
+              <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png"/>
               Ride
             </ActionButton>
+            
             <ActionButton>
+              <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png"/>
               Wheels
             </ActionButton>
+            
             <ActionButton>
+              <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png"/>
               Reserve
             </ActionButton>
+          
           </ActionButtons>
 
           {/* ActionButtons */}
@@ -65,9 +72,12 @@ h-12 w-12 rounded-full border-gray-200 p-px
 `
 
 const ActionButtons = tw.div`
-
+flex 
 `
 
 const ActionButton = tw.div`
-
+flex bg-gray-200 flex-1 m-1 h-32 items-center flex-col justify-center rounded-lg
+`
+const ActionButtonImage = tw.img`
+h-3/5
 `
