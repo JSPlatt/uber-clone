@@ -20,6 +20,7 @@ export default function Home() {
               />
             </Profile>
           </Header>
+          
           {/* ActionButtons */}
           {/* InputButton */}
       
