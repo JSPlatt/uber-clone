@@ -5,12 +5,11 @@ import Link from 'next/link'
 const Search = () => {
     return (
         <Wrapper>
-
-        <Link href="/">
             <ButtonContainer>
-                <BackButton src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
+                <Link href="/">
+                    <BackButton src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
+                </Link>
             </ButtonContainer>
-        </Link>
             <InputContainer>
                 <FromToIcons>
                     <Circle src="https://img.icons8.com/ios-filled/50/9CA3AF/filled-circle.png"/>
