@@ -27,9 +27,6 @@ const Search = () => {
                 <StarIcon src="https://img.icons8.com/ios-filled/50/ffffff/star--v1.png"/>
                 Saved Places
             </SavedPlaces>
-            { /* Input Container */}
-            {/* Saved places */}
-            {/* Confirm Locations */}
             <ConfirmContainer>
                 Confirm Locations
             </ConfirmContainer>
