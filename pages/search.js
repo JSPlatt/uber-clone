@@ -50,7 +50,7 @@ bg-white px-4
 `
 
 const BackButton = tw.img`
-h-12
+h-12 cursor-pointer 
 `
 const InputContainer = tw.div`
 bg-white flex items-center px-4 mb-2
