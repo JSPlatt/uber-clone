@@ -93,7 +93,7 @@ bg-gray-400 w-10 h-10 p-2 rounded-full mr-2
 `
 
 const ConfirmContainer = tw.div`
-bg-black text-white text-center mt-2 mx-4 px-4 py-3 text-2xl cursor-pointer
+bg-black rounded-full text-white text-center mt-2 mx-4 px-4 py-3 text-2xl cursor-pointer
 `
 
 
