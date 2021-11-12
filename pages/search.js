@@ -25,7 +25,7 @@ const Search = () => {
                         placeholder="Enter pickup location"
                         value={pickup}
                         onChange={(e)=> setPickup(e.target.value)}
-                    />
+                   />
                     <Input 
                         placeholder="Where to?"
                         value={dropoff}
