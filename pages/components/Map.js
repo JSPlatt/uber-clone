@@ -14,19 +14,17 @@ const Map = (props) => {
           zoom: 3,
         });
 
-        addToMap(map)
-      });
+        if(props.pickupCoordinates){
+          addToMap(map, props.pickupCoordinates)
+        }
+      }, [props.pickupCoordinates, props.dropOffCoordinates]);
 
-    const addToMap = (map) => {
+    const addToMap = (map, coordinates) => {
       const marker1 = new mapboxgl.Marker()
-          .setLngLat([12.554729, 55.70651])
+          .setLngLat(coordinates)
           .addTo(map)
     }
 
-    useEffect(() => {
-      console.log(props.pickupCoordinates)
-
-    }, [])
 
     return (
         <Wrapper id="map"></Wrapper>
