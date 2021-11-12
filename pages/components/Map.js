@@ -23,8 +23,9 @@ const Map = (props) => {
           .addTo(map)
     }
 
-    useEffect = (() => {
+    useEffect(() => {
       console.log(props.pickupCoordinates)
+
     }, [])
 
     return (
