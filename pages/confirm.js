@@ -8,7 +8,7 @@ const Confirm = () => {
     const [dropoffCoordinates, setDropoffCoordinates] = useState()
 
     const getPickupCoordinates = () => {
-        const pickup = ["Santa Monica"]
+        const pickup = ["Long Beach"]
 
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${pickup}.json?`+
             new URLSearchParams({
@@ -23,7 +23,7 @@ const Confirm = () => {
     }
 
     const getDropOffCoordinates = () => {
-        const dropoff = ["Los Angeles"]
+        const dropoff = ["Santa Monica"]
 
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${dropoff}.json?`+
             new URLSearchParams({

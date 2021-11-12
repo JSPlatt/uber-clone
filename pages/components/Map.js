@@ -17,8 +17,12 @@ const Map = (props) => {
         if(props.pickupCoordinates){
           addToMap(map, props.pickupCoordinates)
         }
-      }, [props.pickupCoordinates, props.dropOffCoordinates]);
 
+        if(props.dropoffCoordinates){
+          addToMap(map, props.dropoffCoordinates)
+        
+        }
+      }, [props.pickupCoordinates, props.dropoffCoordinates]);
     const addToMap = (map, coordinates) => {
       const marker1 = new mapboxgl.Marker()
           .setLngLat(coordinates)
