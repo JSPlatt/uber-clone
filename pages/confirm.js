@@ -77,7 +77,9 @@ const Confirm = () => {
 
 export default Confirm
 
-const ButtonContainer = tw.div``
+const ButtonContainer = tw.div`
+rounded-full absolute top-4 left-4 z-10 bg-white shadow-md cursor-pointer
+`
 
 const BackButton = tw.img`
 h-full object-contain
