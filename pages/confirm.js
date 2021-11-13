@@ -3,6 +3,7 @@ import Map from './components/Map'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import RideSelector from './components/RideSelector'
+import Link from 'next/link'
 
 const Confirm = () => {
     const router = useRouter()
@@ -48,6 +49,11 @@ const Confirm = () => {
 
     return (
         <Wrapper>
+            <ButtonContainer>
+                <Link href='/search'>
+                    <BackButton src='https://img.icons8.com/ios-filled/50/000000/left.png' />
+                </Link>
+            </ButtonContainer>
             <Map 
                 pickupCoordinates = {pickupCoordinates}
                 dropoffCoordinates= {dropoffCoordinates}
@@ -70,6 +76,12 @@ const Confirm = () => {
 }
 
 export default Confirm
+
+const ButtonContainer = tw.div``
+
+const BackButton = tw.img`
+h-full object-contain
+`
 
 const RideContainer = tw.div`
 flex-1 flex flex-col h-1/2
