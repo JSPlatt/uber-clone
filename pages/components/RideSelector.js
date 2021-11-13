@@ -1,8 +1,14 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import tw from 'tailwind-styled-components'
 import { carList } from '../data/carList'
 
 const RideSelector = () => {
+    const [rideDuration, setRideDuration] = useState(0)
+    
+    useEffect(() => {
+        fetch('https://api')
+    }, [])
+
     return (
         <Wrapper>
             <Title>Choose a ride, or swipe up for more</Title>
