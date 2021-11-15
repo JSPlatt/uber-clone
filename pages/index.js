@@ -34,9 +34,9 @@ export default function Home() {
           <Header>
             <UberLogo src="https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg" />
             <Profile>
-              <Name>JP</Name>
+              <Name>{user && user.name}</Name>
               <UserImage
-                src="https://avatars.githubusercontent.com/u/74726047?v=4"
+                src={user && user.photoURL}
               />
             </Profile>
           </Header>
