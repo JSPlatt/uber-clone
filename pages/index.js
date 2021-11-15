@@ -1,17 +1,36 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import tw from 'tailwind-styled-components'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Map from './components/Map'
 import Link from 'next/link'
+import { auth } from '../firebase'
+import { onAuthStateChanged, signOut }  from 'firebase/auth'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+
+  const [user, setUser] = useState(null)
+  const router = useRouter()
+
+  useEffect(()=> {
+    return onAuthStateChanged(auth, user=> {
+      if(user) {
+        setUser({
+          name: user.displayName,
+          photoUrl: user.photoURL,
+        })
+      } else {
+        setUser(null)
+        router.push('/login')
+      }
+    })
+  }, [])
 
   return (
     <Wrapper>
       <Map />
       <ActionItems>
-          {/* Header  */}
           <Header>
             <UberLogo src="https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg" />
             <Profile>
@@ -45,9 +64,7 @@ export default function Home() {
           <InputButton>
             Where to? 
           </InputButton>
-          {/* ActionButtons */}
-          {/* InputButton */}
-      
+         
       </ActionItems> 
     </Wrapper>
   )
